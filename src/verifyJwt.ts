@@ -1,5 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
-import { verify, JsonWebTokenError, TokenExpiredError, NotBeforeError } from 'jsonwebtoken';
+import pkg  from 'jsonwebtoken';
+const { verify, JsonWebTokenError, TokenExpiredError, NotBeforeError } = pkg
 
 export interface VerifyJwtOptions {
   getToken?: (req: Request) => string | undefined;
